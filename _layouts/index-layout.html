@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body>
+
+{% include header.html %}
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>OpenDIGIT</h1>
+                <h2>Digital Infrastructure for Global Infection Tracking</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="/assets/small/maps.jpg">
+            <h2 class="featurette-heading">Disease is Spatial
+                <span class="text-muted small">So why isn't our data?</span>
+            </h2>
+            <p class="lead">Contemporary disease data is aggregated, typically to countries. Understanding and predicting how diseases spread across the globe requires high resolution, disaggregated geospatial data where cases <i>actually happen</i></p>
+            <button class='btn btn-sm btn-default'><a href="/api.html">Let's create it.</a></button>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="/assets/small/pauline-tayag-116363.jpg">
+            <h2 class="featurette-heading">Global World, Global Health
+                <span class="text-muted small">Infrastructure to make informed decisions</span>
+            </h2>
+            <p class="lead">Public health information should be open, free and available to everyone who wants it, without compromising patient privacy.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="/assets/network-1614045_640.png">
+            <h2 class="featurette-heading">Real time analysis on a global scale
+            </h2>
+            <p class="lead">New data sources can facilitate analysis and prediction, enable what-if scenarios, and enhance dynamic visualizations. All in real time. </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+
+
+    </div>
+    <!-- /.container -->
+    <div class='container'>
+      <h2 class='page-header'>What is it?</h2>
+      <p class='lead'>
+        OpenDIGIT is a grand vision for free and open public health and epidimiological data and the infrastructure that supports it. We imagine three facets...
+      </p>
+        <div class='col-xs-12 col-sm-4'>
+          <h4 class='media-header'>Data Collection</h4>
+          <p>
+            Develop and deploy mobile and desktop clients that allow health professionals to record confirmed and suspected cases of infectious diseases.
+            Work with global, national, regional, and local public health providers to tap into existing data streams while ensuring patient confidentiality.
+            Build services that are easy and convenient to use and can work in near-real time and in regions with little or no internet connectivity.
+          </p>
+          <button class='btn btn-default'>Data Collection on Github</button>
+        </div>
+        <div class='col-xs-12 col-sm-4'>
+          <h4 class='media-header'>Data Services</h4>
+          <p>
+            Build a set of robust APIs and backend services for uploading and querying records.
+            Support localization, multiple data formats, and sophisticated querying.
+            Ensure high availability and low latency.
+          </p>
+          <button class='btn btn-default'>Data Services on Github</button>
+        </div>
+        <div class='col-xs-12 col-sm-4'>
+          <h4 class='media-header'>Analysis and Visualization Clients</h4>
+          <p>
+            Create web clients that leverage the data services to develop new insights into disease spread, epidemic prediction, and temporal dynamics of emergent diseases.
+            Implement novel and advanced visualizations to make the most of the new data.
+            Provide built-in pattern recognition and machine learning algorithms to enable what-if scenarios by the public and by health care providers.
+          </p>
+          <button class='btn btn-default'>Visualization on Github</button>
+        </div>
+        <br  />
+        <div class='col-xs-12 center pad'>
+          <h3>This dataset doesn't exist yet.</h3>
+        <p>Health records are spread out over the internet, often in inaccessible forms.
+          Existing applications use <a href="https://www.google.org/flutrends/about/">search term trends</a>, <a href="http://www.healthmap.org/en/">social media data</a>, or
+          or <a href="https://flunearyou.org/#/map">user reports</a> to understand disease dynamics. The <a href="http://www.who.int/gho/en/">World Health Organization</a>, along with national and regional
+          public health officials collect and distribute data about infections, but often at spatially aggregated and temporally low resolution. Moreover, few existing
+          data sources provide programmatic access to raw data in digestable formats suitable for integrating into interactive and engaing client applications.
+        </p>
+        <i class='lead'>
+          A new approach for data collection, management, and distribution is the future.
+        </i>
+      </div>
+    </div>
+
+{% include footer.html %}
+
+</body>
+
+</html>

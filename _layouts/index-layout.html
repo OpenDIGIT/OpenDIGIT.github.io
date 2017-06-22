@@ -26,11 +26,13 @@
         <!-- First Featurette -->
         <div class="featurette" id="about">
             <img class="featurette-image img-circle img-responsive pull-right" src="/assets/small/maps.jpg">
-            <h2 class="featurette-heading">Disease is Spatial
-                <span class="text-muted small">So why isn't our data?</span>
+            <h2 class="featurette-heading">Establishing essential metadata
+                <span class="text-muted small">to improve outbreak prediction</span>
             </h2>
-            <p class="lead">Contemporary disease data is aggregated, typically to countries. Understanding and predicting how diseases spread across the globe requires high resolution, disaggregated geospatial data where cases <i>actually happen</i></p>
-            <button class='btn btn-sm btn-default'><a href="/api.html">Let's create it.</a></button>
+            <p class="lead">
+              Understanding how diseases and infections spread through a population requires knowing when and where cases develop and in which patients.
+              Contemporary public health data is aggregated and doesn't include the metadata essential to effective prediction of future outbreaks.
+            </p>
         </div>
 
         <hr class="featurette-divider">
@@ -54,45 +56,82 @@
             <p class="lead">New data sources can facilitate analysis and prediction, enable what-if scenarios, and enhance dynamic visualizations. All in real time. </p>
         </div>
 
-        <hr class="featurette-divider">
-
+    </div>
 
 
     </div>
+
     <!-- /.container -->
     <div class='container'>
-      <h2 class='page-header'>What is it?</h2>
+      <h1 class='page-header'>What is it?</h1>
       <p class='lead'>
         OpenDIGIT is a grand vision for free and open public health and epidimiological data and the infrastructure that supports it. We imagine three facets...
       </p>
-        <div class='col-xs-12 col-sm-4'>
-          <h4 class='media-header'>Data Collection</h4>
-          <p>
-            Develop and deploy mobile and desktop clients that allow health professionals to record confirmed and suspected cases of infectious diseases.
-            Work with global, national, regional, and local public health providers to tap into existing data streams while ensuring patient confidentiality.
-            Build services that are easy and convenient to use and can work in near-real time and in regions with little or no internet connectivity.
-          </p>
-          <button class='btn btn-default'>Data Collection on Github</button>
+        <div class='col-xs-12 media'>
+          <div class="media-left">
+            <i class="fa fa-edit fa-5x" aria-hidden="true"></i>
+          </div>
+          <div class='media-body'>
+            <h4 class='media-header'>Data Collection</h4>
+            <p>
+              Develop and deploy mobile and desktop clients that allow health professionals to record confirmed and suspected cases of infectious diseases.
+              Work with global, national, regional, and local public health providers to tap into existing data streams while ensuring patient confidentiality.
+              Build services that are easy and convenient to use and can work in near-real time and in regions with little or no internet connectivity.
+            </p>
+            <a href="https://github.com/OpenDIGIT/OpenDIGIT-Collections"><button class='btn btn-default'>Data Collection on Github</button></a>
+          </div>
         </div>
-        <div class='col-xs-12 col-sm-4'>
-          <h4 class='media-header'>Data Services</h4>
-          <p>
-            Build a set of robust APIs and backend services for uploading and querying records.
-            Support localization, multiple data formats, and sophisticated querying.
-            Ensure high availability and low latency.
-          </p>
-          <button class='btn btn-default'>Data Services on Github</button>
+        <div class='col-xs-12 media'>
+          <div class="media-left">
+            <i class="fa fa-cloud fa-5x" aria-hidden="true"></i>
+          </div>
+          <div class='media-body'>
+            <h4 class='media-header'>Infrastructure</h4>
+            <p>
+              Build a set of robust APIs and backend services for uploading and querying records.
+              Support localization, multiple data formats, and sophisticated querying.
+              Ensure high availability and low latency.
+            </p>
+            <a href='https://github.com/OpenDIGIT/OpenDIGIT-data'><button class='btn btn-default'>Data Services on Github</button></a>
+          </div>
         </div>
-        <div class='col-xs-12 col-sm-4'>
-          <h4 class='media-header'>Analysis and Visualization Clients</h4>
-          <p>
-            Create web clients that leverage the data services to develop new insights into disease spread, epidemic prediction, and temporal dynamics of emergent diseases.
-            Implement novel and advanced visualizations to make the most of the new data.
-            Provide built-in pattern recognition and machine learning algorithms to enable what-if scenarios by the public and by health care providers.
-          </p>
-          <button class='btn btn-default'>Visualization on Github</button>
+        <div class='col-xs-12 media'>
+          <div class="media-left">
+            <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
+          </div>
+          <div class='media-body'>
+            <h4 class='media-header'>Analysis and Visualization Clients</h4>
+            <p>
+              Create web clients that leverage the data services to develop new insights into disease spread, epidemic prediction, and temporal dynamics of emergent diseases.
+              Implement novel and advanced visualizations to make the most of the new data.
+              Provide built-in pattern recognition and machine learning algorithms to enable what-if scenarios by the public and by health care providers.
+            </p>
+            <a href="https://github.com/OpenDIGIT/OpenDIGIT-Analysis"><button class='btn btn-default'>Analysis on Github</button></a>
+          </div>
         </div>
-        <br  />
+        <div class='container'>
+          <div class='col-xs-12'>
+            <h3 class='media-header'>Imagine...</h3>
+            <i class="fa fa-heartbeat fa-5x pull-right" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <p class='lead'>
+                    Creating maps of disease spread in real time
+                  </p>
+                </li>
+                <li>
+                  <p class='lead'>
+                    Filtering by age and report veracity
+                  </p>
+                </li>
+                <li>
+                  <p class='lead'>
+                    Comparing spread trajectories of multiple diseases
+                  </p>
+                </li>
+              </ul>
+        </div>
+        <hr class="featurette-divider">
         <div class='col-xs-12 center pad'>
           <h3>This dataset doesn't exist yet.</h3>
         <p>Health records are spread out over the internet, often in inaccessible forms.
@@ -105,6 +144,59 @@
           A new approach for data collection, management, and distribution is the future.
         </i>
       </div>
+
+      <div class='col-xs-12'>
+        <h1 class="featurette-heading">Who can contribute?
+        </h1>
+        <p class='lead'>
+          Anyone!
+        </p>
+        <p>
+          Anyone interested in opening up public health data should get in touch! There's lots to be done in many different areas.
+        </p>
+
+        <p class='lead'>
+          For example...
+        </p>
+        <ul>
+          <li>
+            Public health providers & field workers
+          </li>
+          <li>
+            Health department officials: Local, Regional, State, National & International
+          </li>
+          <li>
+            Lawyers familiar with health data
+          </li>
+          <li>
+            Front end developers
+          </li>
+          <li>
+            Backend developers
+          </li>
+          <li>
+            Database specialists
+          </li>
+          <li>
+            Data scienstists
+          </li>
+          <li>
+            People speaking languages other than English to faciliate localization
+          </li>
+          <li>
+            Open data experts
+          </li>
+          <li>
+            API developers
+          </li>
+          <li>
+            People familiar with working with NGOs
+          </li>
+        </ul>
+        <a href="mailto:sfarley2@wisc.edu?subject=OpenDIGIT&body=I want to help!" ><button class='btn btn-default btn-lg'>I Want to Help!</button></a>
+      </div>
+
+
     </div>
 
 {% include footer.html %}

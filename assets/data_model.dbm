@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.8.2" last-position="25,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="illness">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="120" y="100"/>
+	<column name="id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="name">
+		<type name="text"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="illness_pk" type="pk-constr" table="public.illness">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="reports">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="400" y="40"/>
+	<column name="id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="observer_id">
+		<type name="integer"/>
+	</column>
+	<column name="illness_id">
+		<type name="serial"/>
+	</column>
+	<column name="patient_age">
+		<type name="integer"/>
+	</column>
+	<column name="patient_gender">
+		<type name="char"/>
+	</column>
+	<column name="patient_location">
+		<type name="point"/>
+	</column>
+	<column name="patient_location_type">
+		<type name="text"/>
+	</column>
+	<column name="obfuscated">
+		<type name="boolean"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="reports_pk" type="pk-constr" table="public.reports">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="observer">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="660" y="40"/>
+	<column name="id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="veracity_level">
+		<type name="text"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="observer_pk" type="pk-constr" table="public.observer">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="symptom">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="60" y="240"/>
+	<column name="id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="description">
+		<type name="text"/>
+	</column>
+	<column name="illness_id">
+		<type name="integer"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="symptom_pk" type="pk-constr" table="public.symptom">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="vector">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="360" y="260"/>
+	<column name="id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="method">
+		<type name="text"/>
+	</column>
+	<column name="illness_id">
+		<type name="integer"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="vector_pk" type="pk-constr" table="public.vector">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<constraint name="fk_illness_report" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.illness" table="public.reports">
+	<columns names="illness_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_observer_report" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.observer" table="public.reports">
+	<columns names="observer_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_symptom_illness" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.illness" table="public.symptom">
+	<columns names="illness_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_vector_illness" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.illness" table="public.vector">
+	<columns names="illness_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_reports_illness" type="relfk"
+	 src-table="public.reports"
+	 dst-table="public.illness"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_reports_observer" type="relfk"
+	 src-table="public.reports"
+	 dst-table="public.observer"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_symptom_illness" type="relfk"
+	 src-table="public.symptom"
+	 dst-table="public.illness"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_vector_illness" type="relfk"
+	 src-table="public.vector"
+	 dst-table="public.illness"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
